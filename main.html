@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lashkara Beauty Hub</title>
+    <!-- Use Tailwind CSS for a modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Apply a custom font for a professional look */
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f7fafc; /* Light gray background */
+      }
+      /* Custom styles for section headers and other elements */
+      .section-header {
+        font-weight: 700;
+        color: #4a5568;
+      }
+      .text-primary-500 {
+        color: #d8b4fe; /* A soft purple color for accents */
+      }
+      .bg-primary-500 {
+        background-color: #d8b4fe;
+      }
+      .bg-primary-600:hover {
+        background-color: #c084fc;
+      }
+    </style>
+  </head>
+  <body class="text-gray-700">
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-gray-800"
+          >Lashkara Beauty Hub</a
+        >
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden">
+          <button
+            id="mobile-menu-button"
+            class="text-gray-500 hover:text-gray-800 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex space-x-8">
+          <a
+            href="#services"
+            class="text-gray-600 hover:text-primary-500 transition-colors duration-300"
+            >Services</a
+          >
+          <a
+            href="#about"
+            class="text-gray-600 hover:text-primary-500 transition-colors duration-300"
+            >About Us</a
+          >
+          <a
+            href="#gallery"
+            class="text-gray-600 hover:text-primary-500 transition-colors duration-300"
+            >Gallery</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-600 hover:text-primary-500 transition-colors duration-300"
+            >Contact</a
+          >
+        </div>
+      </nav>
+
+      <!-- Mobile Menu (initially hidden) -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-white px-6 py-2">
+        <a
+          href="#services"
+          class="block py-2 text-gray-600 hover:text-primary-500 transition-colors duration-300"
+          >Services</a
+        >
+        <a
+          href="#about"
+          class="block py-2 text-gray-600 hover:text-primary-500 transition-colors duration-300"
+          >About Us</a
+        >
+        <a
+          href="#gallery"
+          class="block py-2 text-gray-600 hover:text-primary-500 transition-colors duration-300"
+          >Gallery</a
+        >
+        <a
+          href="#contact"
+          class="block py-2 text-gray-600 hover:text-primary-500 transition-colors duration-300"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative bg-gray-900 text-white py-24 md:py-32 overflow-hidden"
+    >
+      <!-- Placeholder image or gradient. In a real project, you'd use a background image -->
+      <div
+        class="absolute inset-0 z-0 opacity-40"
+        style="
+          background-image: url('assests/image2.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      ></div>
+      <div class="container mx-auto px-6 relative z-10 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+          Your Beauty, Our Passion
+        </h1>
+        <p class="text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">
+          Discover a world of beauty and relaxation. From stunning hairstyles to
+          rejuvenating skincare, we're here to make you feel your best.
+        </p>
+        <a
+          href="#services"
+          class="inline-block bg-primary-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-primary-600 transition-all duration-300 transform hover:scale-105"
+        >
+          Explore Services
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-12 section-header"
+        >
+          Our Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 duration-300"
+          >
+            <img
+              src="assests/logos/image.jpeg"
+              alt="Hair Styling"
+              class="w-24 h-24 mx-auto mb-4 rounded-full"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Hair Styling
+            </h3>
+            <p class="text-gray-500">
+              From chic cuts to vibrant colors, our expert stylists will give
+              you the perfect look.
+            </p>
+          </div>
+          <!-- Service Card 2 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 duration-300"
+          >
+            <img
+              src="assests/logos/image7.webp"
+              alt="Bleaching"
+              class="w-24 h-24 mx-auto mb-4 rounded-full"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Bleaching</h3>
+            <p class="text-gray-500">
+              Professional and safe skin bleaching services for a brighter, even
+              tone.
+            </p>
+          </div>
+          <!-- Service Card 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 duration-300"
+          >
+            <img
+              src="assests/logos/image2.webp"
+              alt="Skincare"
+              class="w-24 h-24 mx-auto mb-4 rounded-full"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Skincare</h3>
+            <p class="text-gray-500">
+              Rejuvenate your skin with our custom facials and advanced skin
+              treatments.
+            </p>
+          </div>
+          <!-- Service Card 4 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 duration-300"
+          >
+            <img
+              src="assests/logos/image3.jpg"
+              alt="Makeup Artistry"
+              class="w-24 h-24 mx-auto mb-4 rounded-full"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Makeup Artistry
+            </h3>
+            <p class="text-gray-500">
+              Professional makeup application for weddings, events, and
+              photoshoots.
+            </p>
+          </div>
+          <!-- Service Card 5 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 duration-300"
+          >
+            <img
+              src="assests/logos/images4.jpeg"
+              alt="Mehndi Design"
+              class="w-24 h-24 mx-auto mb-4 rounded-full"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Mehndi Design
+            </h3>
+            <p class="text-gray-500">
+              Intricate and elegant Mehndi designs for all occasions, from
+              bridal to festive.
+            </p>
+          </div>
+          <!-- Service Card 6 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 duration-300"
+          >
+            <img
+              src="assests/logos/images5.png"
+              alt="Bridal Packages"
+              class="w-24 h-24 mx-auto mb-4 rounded-full"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Bridal Packages
+            </h3>
+            <p class="text-gray-500">
+              Comprehensive beauty packages tailored for your special day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-gray-100 py-16 md:py-24">
+      <div
+        class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12"
+      >
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 section-header">
+            About Our Parlor
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Lashkara beauty hub was founded on the belief that beauty is an
+            experience, not just a service. We've created a serene and welcoming
+            space where you can relax, be pampered, and leave feeling confident
+            and beautiful.Enjoy our premium beauty services in the comfort of
+            your home. We offer convenient and professional at-home appointments
+            for all our treatments.
+          </p>
+        </div>
+        <div class="lg:w-1/2">
+          <!-- Placeholder for an image or video -->
+          <img
+            src="assests/owner1.jpg"
+            alt="About Us"
+            class="rounded-xl shadow-lg"
+            width="400" height="500"
+            
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 md:py-24">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-12 section-header"
+        >
+          Our Gallery
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Gallery Image 1 -->
+          <img
+            src="assests/image3.jpg"
+            alt="Look 1"
+            class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300"
+          />
+          <!-- Gallery Image 2 -->
+          <img
+            src="assests/image4.jpg"
+            alt="Look 2"
+            class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300"
+          />
+          <!-- Gallery Image 3 -->
+          <img
+            src="assests/image6.jpg"
+            alt="Look 3"
+            class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300"
+          />
+          <!-- Gallery Image 4 -->
+          <img
+            src="assests/image7.jpg"
+            alt="Look 4"
+            class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300"
+          />
+          <!-- Gallery Image 5 -->
+          <img
+            src="assests/image8.jpg"
+            alt="Look 5"
+            class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300"
+          />
+          <!-- Gallery Image 6 -->
+          <img
+            src="assests/image9.jpg"
+            alt="Look 6"
+            class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300"
+          />
+          <!-- Gallery Image 7 -->
+          <img
+            src="assests/image10.jpg"
+            alt="Look 7"
+            class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300"
+          />
+          <!-- Gallery Image 8 -->
+          <img
+            src="assests/image11.jpg"
+            alt="Look 8"
+            class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-primary-500 text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Book Your Appointment
+        </h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto">
+          Ready to transform your look? Fill out the form below and we'll get
+          back to you to confirm your appointment.
+        </p>
+        <form
+          id="contact-form"
+          class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg"
+        >
+          <div class="mb-4">
+            <!-- Added name attributes for the form data -->
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              class="w-full px-4 py-3 rounded-lg border text-gray-900 border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              class="w-full px-4 py-3 rounded-lg border text-gray-900 border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Your Phone Number (10 digits)"
+              pattern="[0-9]{10}"
+              title="Please enter a 10-digit phone number"
+              class="w-full px-4 py-3 rounded-lg border text-gray-900 border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+              required
+            />
+          </div>
+          <div class="mb-6">
+            <textarea
+              name="message"
+              placeholder="Tell us what service you're interested in..."
+              rows="4"
+              class="w-full px-4 py-3 rounded-lg border text-gray-900 border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-gray-900 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-800 transition-colors duration-300"
+          >
+            Send Request
+          </button>
+        </form>
+        <!-- Message box for success/error messages -->
+        <div id="form-message" class="mt-4 text-center"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6 text-center text-sm">
+        <p>&copy; 2024 Glow & Glamour Beauty Parlor. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Form Submission and Mobile Menu Toggle -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Form submission logic
+        const form = document.getElementById("contact-form");
+        const formMessage = document.getElementById("form-message");
+        const formURL = "https://formspree.io/f/xldlvzkl"; // Replace with your Formspree URL
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          formMessage.textContent = "Sending...";
+          formMessage.style.color = "#4a5568";
+
+          // Collect form data
+          const formData = new FormData(event.target);
+          const data = Object.fromEntries(formData.entries());
+
+          try {
+            const response = await fetch(formURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json", // Set the content type to JSON
+                Accept: "application/json",
+              },
+              body: JSON.stringify(data), // Convert the data to a JSON string
+            });
+
+            if (response.ok) {
+              formMessage.textContent =
+                "Thank you! Your request has been sent.";
+              formMessage.style.color = "#38a169"; // Green for success
+              form.reset(); // Clear the form
+            } else {
+              // Handle server-side errors
+              formMessage.textContent =
+                "There was a problem sending your request. Please try again.";
+              formMessage.style.color = "#e53e3e"; // Red for error
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            formMessage.textContent =
+              "Something went wrong. Please check your connection and try again.";
+            formMessage.style.color = "#e53e3e"; // Red for error
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
