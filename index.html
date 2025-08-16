@@ -6,6 +6,11 @@
     <title>Lashkara Beauty Hub</title>
     <!-- Use Tailwind CSS for a modern, responsive design -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       /* Apply a custom font for a professional look */
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
@@ -277,8 +282,8 @@
             src="assests/owner1.jpg"
             alt="About Us"
             class="rounded-xl shadow-lg"
-            width="400" height="500"
-            
+            width="400"
+            height="500"
           />
         </div>
       </div>
@@ -407,13 +412,40 @@
         </form>
         <!-- Message box for success/error messages -->
         <div id="form-message" class="mt-4 text-center"></div>
+
+        <!-- New Contact Us and Email Us Section -->
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <div
+            class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 text-gray-900"
+          >
+            <!-- Contact Us (Phone) -->
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-phone text-2xl"></i>
+              <a href="tel:+91 70170 99057" class="text-white hover:underline">
+                <h3 class="text-xl font-semibold">Contact Us</h3>
+                <p class="text-sm">+91 70170 99057</p>
+              </a>
+            </div>
+            <!-- Email Us -->
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-envelope text-2xl"></i>
+              <a
+                href="mailto:lashkarabeautyhub07@gmail.com"
+                class="text-white hover:underline"
+              >
+                <h3 class="text-xl font-semibold">Email Us</h3>
+                <p class="text-sm">lashkarabeautyhub07@gmail.com</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
       <div class="container mx-auto px-6 text-center text-sm">
-        <p>&copy; 2024 Glow & Glamour Beauty Parlor. All rights reserved.</p>
+        <p>&copy; Lashkara Beauty Hub. All rights reserved.</p>
       </div>
     </footer>
 
@@ -430,7 +462,7 @@
         // Form submission logic
         const form = document.getElementById("contact-form");
         const formMessage = document.getElementById("form-message");
-        const formURL = "https://formspree.io/f/xldlvzkl"; // Replace with your Formspree URL
+        const formURL = "https://formspree.io/f/xldlvzkl";
 
         form.addEventListener("submit", async function (event) {
           event.preventDefault(); // Prevent the default form submission
